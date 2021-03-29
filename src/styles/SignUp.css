@@ -1,0 +1,132 @@
+.signup{
+    position:absolute;
+    top:15%;
+    z-index:1;
+    color:#fff;
+    text-align: center;
+    left:0;
+    right:0;
+    width:90%;
+    max-width: 400px;
+    padding: 60px;
+    line-height: 1;
+    margin-left:auto;
+    margin-right:auto;
+    background: rgba(0,0,0,0.85);
+}
+
+
+.signup > form{
+    display:grid;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.signup > form > h1{
+    text-align: left;
+    margin-bottom:15px;  
+}
+
+.signup > form > input{
+    outline:none;
+    font-size:1rem;
+    border-radius:4px;
+    border:none;
+    padding:10px 15px;
+    margin-top:10px;
+    font-weight:700;
+}
+
+.signup > form > button{
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #db202c;
+    cursor: pointer;
+    margin-top:15px;
+    font-weight:700;
+    border: none;
+    outline: none;
+}
+
+.signup > form > button:hover{
+    background-color: #e50914;
+}
+
+.graynew{
+    color: gray;
+}
+
+.signup_link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    margin-top: 5px;
+    margin-left: 10rem;
+    transition: width 0.4s;
+  }
+  .signup_link:hover::after {
+    margin-top: 5px;
+    width: 40%;
+  }
+
+.signup_link:hover{
+    cursor:pointer;
+}
+
+.signup > form > h4{
+    text-align: left;
+    margin-top:20px;
+}
+
+.or{
+    margin-top:8px;
+}
+
+.signinbtns{
+    display:flex;
+    justify-content:space-around;
+}
+
+.signinbtns > i {
+    padding-top: 4px;
+}
+
+.Toastify__toast-container--top-center {
+    top: -6em;
+    right: 1.5em; 
+}
+
+.Toastify__toast--error {
+    background: #db202c;
+ }
+
+ .Toastify__toast--success {
+    background: gold;
+ }
+
+@media screen and (max-width: 500px) {
+
+    .signup {
+        width:95%;
+        padding: 30px;
+    }
+    .signup > form > h4 {
+        font-size:14px;
+    }
+    .signinbtns > span{
+        font-size:1rem;
+    }
+    .signup_link::after {
+        margin-left: 8.5rem;
+    }
+    .signup_link:hover::after {
+        width: 35%;
+      }
+    
+}
+
+

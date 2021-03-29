@@ -1,0 +1,105 @@
+
+.genres_list {
+  background-color: #0e0f11;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.genmv_list{
+  margin-top:7%;
+}
+
+.genrelink {
+  margin: 2rem;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  transition: transform 500ms;
+}
+
+.categorymvinfo {
+  text-decoration: none;
+}
+
+.genrelink:hover {
+  transform: scale(1.08);
+}
+
+.genre_img {
+  width: 250px;
+  height: 350px;
+}
+
+.genre_info {
+  max-width: 250px;
+  margin: 0 25px;
+  color: #db202c;
+  border: 2px solid #db202c;
+}
+
+.large_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+.genremovie_title {
+  width: 80%;
+}
+
+.rating {
+  color: gold;
+}
+.star {
+  color: gold;
+  margin-right: 3px;
+}
+
+.genrelink:hover .genre_info {
+  background-color: #db202c;
+  color: black;
+}
+
+.watchlistbtn {
+  margin: 10px;
+  width: 250px;
+  font-size: 1.2em;
+  margin: 0 25px;
+  padding: 6px;
+  text-align: center;
+  color: gold;
+  border: 2px solid gold;
+  cursor: pointer;
+}
+
+.watchlistbtn .fa-plus,
+.watchlistbtn .fa-minus {
+  margin-right: 10px;
+}
+
+.watchlistbtn:hover {
+  background-color: gold;
+  color: #db202c;
+}
+
+@media (max-width: 960px) and (min-width: 500px) {
+.genmv_list{
+  margin-top:10%;
+}
+}
+
+@media (max-width: 499px) {
+
+  .genmv_list{
+     margin-top:15%;
+  }
+  .genrelink {
+    margin-bottom: 0rem;
+  }
+  .genrelink:hover {
+    transform: scale(1);
+  }
+
+}

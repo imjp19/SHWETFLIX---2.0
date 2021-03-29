@@ -1,0 +1,127 @@
+.myprofile{
+    height: 90vh;
+    color: white;
+}
+
+.profile_mainbody {
+    display: flex;
+    flex-direction : column;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:15%;
+    max-width:800px;
+}
+
+.profile_info{
+    display:flex;
+}
+
+.profile_details{
+    margin-left: 25px;
+    flex:1;
+}
+
+.profile_mainbody > h1{
+    font-size: 40px;
+    font-weight: 400;
+    border-bottom: 2px solid #282c2d;
+    margin-bottom: 20px;
+}
+
+.profile_details > h2{
+   background-color:gray;
+   padding: 15px;
+   font-size: 15px;
+   font-weight : 500;
+   padding-left: 20px;
+}
+
+.profile_info > img{
+    height:120px;
+}
+
+
+.signout-btn {
+    padding: 10px 20px;
+    margin-top:3%;
+    border-radius: 4px;
+    border-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    background-color: #db202c;
+    outline:none;
+}
+      
+.signout-btn:hover {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #db202c;
+    transition: all 0.6s ease-out;
+}
+
+@media screen and (max-width: 960px) and (min-width: 550px){
+
+    .profile_mainbody {
+        margin-top:15%;
+        width:60%;
+    }
+
+
+}
+
+@media screen and (max-width: 550px) and (min-width:375px){
+
+    .profile_mainbody {
+        margin-top:35%;
+        width:94%;
+    }
+    .profile_mainbody > h1{
+        font-size: 30px;
+    }
+    .profile_info > img{
+        height:100px;
+    }
+    .profile_details{
+        margin-left: 10px;
+    }
+    .profile_details > h2{
+        padding:10px;
+    }
+
+
+}
+
+@media screen and (max-width: 375px)
+{
+    .profile_mainbody{
+        padding:2px;
+        margin:0;
+        margin-top:60%;
+        width:94%;
+    }
+    .profile_mainbody > h1{
+        font-size: 25px;
+    }
+    .profile_details > h2{
+        padding:8px 5px;
+
+    }
+    .signout-btn{
+        padding: 5px 12px;
+        font-size: 15px;
+    }
+    .signout-btn:hover{
+        padding: 5px 12px;
+    }
+    .profile_info > img{
+        height:80px;
+    }
+    .profile_details{
+        margin-left: 6px;
+    }
+    
+}

@@ -1,0 +1,74 @@
+ .frequent{
+    padding: 5% 15%;
+  }
+  .frequent h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4%;
+  }
+  .frequent .Questions button{
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
+    text-align: left;
+    padding: 2%;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: #303030;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .fa-plus{
+    margin-top:2px;
+  }
+  .frequent .Questions .faq-answer{
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    background: #303030;
+    color: #fff;
+    text-align: left;
+  }
+
+  .freq_forminput{
+    margin:5% 10%;
+    text-align: center;
+  }
+  
+  .closed{
+    display: none;
+  }
+  .rotate{
+    transform: rotate(45deg);
+  }
+
+  @media screen and (max-width: 960px) {
+
+    .frequent{
+      padding: 5% 8%;
+    }
+    .frequent h1{
+      font-size: 1.6rem;
+    }
+    .frequent .Questions button{
+      font-size: 1.2rem;
+    }
+    .frequent .Questions .faq-answer{
+      font-size: 1.2rem;
+    }
+    .freq_forminput h3{
+      margin: 2%;
+    }
+    .freq_forminput{
+      margin:0;
+    }
+
+
+  }

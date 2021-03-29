@@ -1,0 +1,66 @@
+.errorstyles {
+    text-align: center;
+    color: #db202c;
+  }
+  
+  .fourzerofour {
+    font-size: 15vw;
+    text-align: center;
+    margin: 10vh auto;
+    margin-bottom: 0px;
+  }
+  .ErrorPage {
+    font-size: 4vw;
+    margin-bottom: 20px;
+  }
+  
+  .ErrorMsg {
+    font-size: 2vw;
+  }
+  
+  .goto_link {
+    text-align: center;
+  }
+
+  .goto_link .signout-btn{
+    font-size: 2rem;
+  }
+
+
+  @media (max-width: 900px) and (min-width: 500px) {
+    .fourzerofour {
+       margin: 14vh auto;
+       margin-bottom: 0px;
+        font-size: 18vw;
+      }
+      .ErrorPage {
+        font-size: 6vw;
+      }
+    
+      .ErrorMsg {
+        font-size: 3vw;
+      }
+      .goto_link .signout-btn{
+        font-size: 1.5rem;
+      }
+     
+  }
+
+  @media (max-width: 499px) {
+    .fourzerofour {
+       margin: 20vh auto;
+       margin-bottom: 0px;
+        font-size: 20vw;
+      }
+      .ErrorPage {
+        font-size: 8vw;
+      }
+    
+      .ErrorMsg {
+        font-size: 5vw;
+      }
+    
+      .goto_link .signout-btn{
+        font-size: 1rem;
+      }
+  }
