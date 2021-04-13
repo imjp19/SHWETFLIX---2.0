@@ -32,7 +32,7 @@ const Genres = () =>{
                             <>
                             <Link to={`/genres/${genre.id}/${mediatype}`} className="genrelink" key={genre.id} >
                             <div data-aos="fade-up" data-aos-offset="100" >
-                            <div className="genre_li" >
+                            <div >
                                 <img className="genre_img" src={(mediatype === 'movie'? MVGenresImages[index].img : TVGenresImages[index].img)} alt={genre.name}/>
                             </div>
                             <div className="genre_info" >

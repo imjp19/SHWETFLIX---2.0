@@ -4,6 +4,7 @@ import { selectUser } from "../features/userSlice";
 import db from "../firebase";
 import {Link} from "react-router-dom";
 import { mywatchlist} from "./MenuListImg";
+import Skeleton from './Skeleton';
 import "../styles/WatchSearch.css"
 
 const Mywatchlist = () => {
@@ -19,7 +20,10 @@ const Mywatchlist = () => {
     .catch((err) => console.log(err));
    },[user.uid,mwl])
 
-
+   const handleLoading = (e) =>{
+    e.target.classList.remove("load_img");
+    e.target.parentNode.firstChild.classList.add("load_img");
+    }
     const img_baseurl = "https://image.tmdb.org/t/p/original/";
     return(
         <>
@@ -37,9 +41,10 @@ const Mywatchlist = () => {
                                         <div data-aos="fade-up">
                                      <Link to={movie.card_link} className="categorymvinfo">
                                      
-                                     <div className="genre_li">
-                                         <img className="genre_img" src={`${img_baseurl}${movie.poster_path}`}
-                                         alt={movie.title || movie.name || movie.original_name}/>
+                                     <div>
+                                         <div className='genre_img'><Skeleton sktype={'sk-moviecard'}/></div>
+                                         <img className="genre_img load_img" src={`${img_baseurl}${movie.poster_path}`}
+                                         alt={movie.title || movie.name || movie.original_name} onLoad={handleLoading}/>
                                      </div>
                                      <div className="genre_info large_info">
                                          <h3 className="genremovie_title">{movie.title || movie.name || movie.original_name}</h3>

@@ -30,6 +30,8 @@
 .genre_img {
   width: 250px;
   height: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .genre_info {

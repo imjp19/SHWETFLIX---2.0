@@ -1,4 +1,5 @@
 import React,{useEffect,useContext} from 'react';
+import Skeleton from './Skeleton';
 import db from "../firebase";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
@@ -12,20 +13,28 @@ const MovieCard = ({card_link,card_item,index}) => {
     const movie = card_item;
 
     useEffect(()=>{
-        db.collection('users').doc(user.uid).update({userwatchlist: mwl}).then( userData => console.log(userData))
+        db.collection('users').doc(user.uid).update({userwatchlist: mwl}).then( userData => {})
         .catch((err) => console.log(err));
        },[user.uid,mwl])
 
-
     const img_baseurl = "https://image.tmdb.org/t/p/original/";
+
+    const handleLoading = (e) =>{
+        e.target.classList.remove("load_img");
+        e.target.parentNode.firstChild.classList.add("load_img");
+    }
+
 
     return (
         <div className="genrelink">
             <div data-aos="fade-up"  data-aos-offset="100">
                 <Link to={card_link} className="categorymvinfo" onClick={()=>window.scroll(0,0)}>
-                    <div className="genre_li">
-                        <img className="genre_img" src={`${img_baseurl}${movie.poster_path}`}
-                            alt={movie.title || movie.name || movie.original_name}/>
+                    <div >
+                        <div className='genre_img'><Skeleton sktype={'sk-moviecard'}/></div>
+                        <img className="genre_img load_img" src={`${img_baseurl}${movie.poster_path}`}
+                            alt={movie.title || movie.name || movie.original_name}
+                            onLoad={handleLoading}
+                            />
                     </div>
                     <div className="genre_info large_info">
                         <h3 className="genremovie_title">{movie.title || movie.name || movie.original_name}</h3>

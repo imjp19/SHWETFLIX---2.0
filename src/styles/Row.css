@@ -58,7 +58,6 @@
 .row_poster {
   max-width: 250px;
   max-height: 150px;
-  
 }
 
 .homemvinfo {
@@ -85,12 +84,11 @@
 .row_posterLarge {
   max-width: 250px;
   max-height: 250px;
-  
 }
+
 
 @media (max-width: 960px) {
   .row_posterLarge {
-    margin-top: 5px;
     margin-bottom: 3px;
     max-height: 220px;
   }

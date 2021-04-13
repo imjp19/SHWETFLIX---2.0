@@ -1,6 +1,7 @@
 import React,{ useState, useEffect} from 'react';
 import axios from "../axios";
 import { Link, useParams } from 'react-router-dom';
+import Skeleton from "./Skeleton";
 import apirequests from "../apirequests";
 import "../styles/SeasonEpisodes.css";
 
@@ -21,6 +22,11 @@ const SeasonEpisodes = () => {
         fetchSeason();
     },[seasonno,mediatype,movieid]);
 
+  const handleLoading = (e) =>{
+    e.target.classList.remove("load_img");
+    e.target.parentNode.firstChild.classList.add("load_img");
+  }
+
   let episodes = seasondata.episodes;let episodeList;
   
   if(episodes)
@@ -30,10 +36,11 @@ const SeasonEpisodes = () => {
       (ep.still_path) ?
       <>
        <div className="episode_outer" data-aos={(i%2===0) ? `flip-left` : `flip-right` } data-aos-offset="100" data-aos-duration="2000">
+          <div className='epi_image'><Skeleton sktype={'sk-season'}/></div> 
           <img 
             key={ep.id}
-            className='epi_image'
-            src={img_baseurl + ep.still_path} alt={ep.name}/>
+            className='epi_image load_img'
+            src={img_baseurl + ep.still_path} alt={ep.name} onLoad={handleLoading}/>
         
         <div className="epi_info">
           <div classNam="epi_namedate">
