@@ -26,7 +26,7 @@
 
 ## So What are you waiting For! Go and Check Now: 🤩[SHWETFLIX](https://shwetflix.netlify.app/)😎
 * It is hosted on netlify : https://shwetflix.netlify.app/
-* Enjoy Your Favourites Anytime Anywhere
+* Enjoy Your Favourites Anytime Anywhere.
 
 
 
